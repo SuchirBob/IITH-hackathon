@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing and Events</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <header>
+        <h1>festiify</h1>
+        <p>Your gateway to exciting events!</p>
+    </header>
+    <main>
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div id="event-list">
+                <!-- Dynamic event list will be populated here -->
+            </div>
+            <form id="event-form">
+                <h3>Add New Event</h3>
+                <input type="text" id="event-title" placeholder="Event Title" required>
+                <input type="date" id="event-date" required>
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+    </main>
+   
+
+    <script>
+        // Initial array of events
+        const events = [
+            { title: "Concert in the Park", date: "2024-10-15", id: "1" },
+            { title: "Art Exhibition", date: "2024-11-05", id: "2" },
+            { title: "Food Festival", date: "2024-12-01", id: "3" }
+        ];
+
+        // Function to display events
+        function displayEvents() {
+            const eventList = document.getElementById('event-list');
+            eventList.innerHTML = ''; // Clear current events
+
+            events.forEach(event => {
+                const eventDiv = document.createElement('div');
+                eventDiv.classList.add('event');
+                eventDiv.innerHTML = `
+                    <h3>${event.title}</h3>
+                    <p>Date: ${event.date}</p>
+                    <button onclick="buyTickets('${event.id}')">Buy Tickets</button>
+                `;
+                eventList.appendChild(eventDiv);
+            });
+        }
+
+        // Function to handle adding a new event
+        document.getElementById('event-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const title = document.getElementById('event-title').value;
+            const date = document.getElementById('event-date').value;
+            const newEvent = { title, date, id: Date.now().toString() };
+
+            events.push(newEvent); // Add the new event to the array
+            displayEvents(); // Refresh the event list
+            document.getElementById('event-form').reset(); // Reset the form
+        });
+
+        // Function to handle ticket buying
+        function buyTickets(eventId) {
+            alert(`Tickets for "${events.find(event => event.id === eventId).title}" have been purchased!`);
+        }
+
+        // Initial display of events
+        displayEvents();
+    </script>
+</body>
+</html>
