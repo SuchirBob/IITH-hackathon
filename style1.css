@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color:#8B6C5C;
+    background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    text-align: center;
+    padding: 1px;
+    border-radius: 1px;
+    background-color:#040404; /* Semi-transparent background */
+}
+
+main {
+    padding: 10px;
+}
+
+
+
+.events {
+    max-width: 8000px;
+    margin: auto;
+    background-color:#8B6C5C;
+    padding: 10px;
+    border-radius: 025px;
+    border-color: rgb(0, 0, 0);
+}
+
+.event {
+    margin: 20px 0;
+    padding: 25px;
+    background-color:#e6dede;
+    border-radius: 5px;
+}
+
+h1 {
+    color:#8B6C5C; /* Gold color for headers */
+    padding:50px;
+}
+h2 {
+    color:#000000; /* Gold color for headers */
+    padding:4px;}
+button {
+    padding: 10px 20px;
+    background-color: #79a3bb;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color:#000000;
+}
+.events .tickets
+{
+    text-decoration: none;
+    background-color: #FFD700;
+    color: rgb(236, 32, 32);
+    padding: 10px 20px;
+}
