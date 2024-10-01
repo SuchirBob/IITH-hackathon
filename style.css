@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://ih1.redbubble.net/image.1117450289.5414/flat,750x1000,075,f.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f39c12;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e67e22;
+}
+
+.hidden {
+    display: none;
+}
+
+#confirmation {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 255, 0, 0.7);
+    border-radius: 5px;
+}

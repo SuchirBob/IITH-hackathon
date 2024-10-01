@@ -3,45 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticketing and Events</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Event Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1> FESTIFY</h1>
-        <style>
-            body{
-                background-image:url(festify.png.jpg) ;
-            }
+    <div class="container">
+        <h1>Book Your Event Tickets</h1>
+        <form id="booking-form">
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" name="event-name" required>
 
-            .hidden{
-                display: none;
-            }
-           </style>
-    </header>
-    <main>
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <div class="event">
-                <h3>Concert in the Park</h3>
-                <p>Date: October 15, 2024</p>
-                <a href="http://127.0.0.1:5500/indexconc.html" class="tickets">Buy Tickets</a>
-            
-            </div>
-            <div class="event">
-                <h3>Art Exhibition</h3>
-                <p>Date: November 5, 2024</p>
-                <a href="http://127.0.0.1:5500/art.html" class="tickets">Buy Tickets</a>
-            </div>
-            <div class="event">
-                <h3>Food Festival</h3>
-                <p>Date: December 1, 2024</p>
-                <a href="http://127.0.0.1:5500/food.html" class="tickets">Buy Tickets</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 FESTIFY. All rights reserved.</p>
-    </footer>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets" min="1" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="confirmation" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
